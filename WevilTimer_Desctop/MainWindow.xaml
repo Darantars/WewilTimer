@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WevilTimer_Desctop"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="#282828">
     <Grid>
-        
+        <Button Margin="349,175,349,175">SMT</Button>
     </Grid>
 </Window>
