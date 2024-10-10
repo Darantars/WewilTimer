@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WevilTimer_Desctop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+524eb2664f4f9a76da6e6f453140066b3088dc07")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51a3fe4c9532ffc26cc87890e2e575c3aa8e2115")]
 [assembly: System.Reflection.AssemblyProductAttribute("WevilTimer_Desctop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WevilTimer_Desctop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
