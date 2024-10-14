@@ -9,3 +9,6 @@
 .Release/
 .bin/
 .obj/
+.Wewil_Timer_Desctop/obj/
+/Wewil_Timer_Desctop/obj
+/Wewil_Timer_Desctop
