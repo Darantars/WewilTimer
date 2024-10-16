@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Wewil_Timer_Desctop.Properties
+namespace WevilTimer_Desctop.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Wewil_Timer_Desctop.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Wewil_Timer_Desctop.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WevilTimer_Desctop.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
