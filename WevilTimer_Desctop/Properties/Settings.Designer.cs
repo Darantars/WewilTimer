@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Wewil_Timer_Desctop.Properties
+namespace WevilTimer_Desctop.Properties
 {
 
 
