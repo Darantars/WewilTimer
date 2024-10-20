@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         WindowStyle="None"
         Background="#282828"
-        Title="PreloaderWindow" Height="450" Width="800">
-    <Grid>
+        Title="PreloaderWindow" Height="450" Width="800" MinHeight="450" MinWidth="800">
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center" > 
+        <StackPanel Orientation="Horizontal">
+            <TextBlock FontFamily="Inter" FontSize="32" Foreground="#3500D4">Wewil</TextBlock>
+            <TextBlock FontFamily="Inter" FontSize="32" Foreground="#B6B6B6">Timer</TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

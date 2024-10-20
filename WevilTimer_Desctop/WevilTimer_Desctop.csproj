@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="MainWindow\View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PreloaderWindow\PreloaderWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,6 +67,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MainModels\Mvvm\RelayCommand.cs" />
+    <Compile Include="MainWindow\ViewModel\MainWindow.xaml.cs" />
     <Compile Include="PreloaderWindow\PreloaderWindow.xaml.cs">
       <DependentUpon>PreloaderWindow\PreloaderWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -93,6 +99,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MainWindow\Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="src\Resources\Icons\Close_Button_Icon.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
