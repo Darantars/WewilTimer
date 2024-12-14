@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WewilTimer_Desctop.Models
+namespace WewilTimer_Core.Models
 {
     public class ToDoItem
     {
