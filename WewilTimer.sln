@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer.Android", "..\We
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer.Desktop", "..\WewilTimer.Desktop\WewilTimer.Desktop.csproj", "{3B2F63E1-CEB6-447A-8924-1F70B7FF9A85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer_Core", "..\WewilTimer_Core\WewilTimer_Core.csproj", "{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer.Core", "..\WewilTimer.Core\WewilTimer.Core.csproj", "{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

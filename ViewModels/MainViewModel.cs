@@ -4,7 +4,7 @@ using System.Reactive;
 using System.Windows.Input;
 using Avalonia.Controls;
 using ReactiveUI;
-using WewilTimer_Core.Models;
+using WewilTimer.Core.Models;
 using WewilTimer.ViewModels;
 using WewilTimer.Views;
 
