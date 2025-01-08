@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer", "WewilTimer.csproj", "{178F703F-5395-4895-95E9-82514CAF9A2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B6801741-85B5-4BD2-9CDC-D7FEE062CB79} = {B6801741-85B5-4BD2-9CDC-D7FEE062CB79}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer.Android", "..\WewilTimer.Android\WewilTimer.Android.csproj", "{D4EC659A-1E12-4D1B-8B42-7319A8A23D33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer.Desktop", "..\WewilTimer.Desktop\WewilTimer.Desktop.csproj", "{3B2F63E1-CEB6-447A-8924-1F70B7FF9A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WewilTimer_Core", "..\WewilTimer_Core\WewilTimer_Core.csproj", "{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{178F703F-5395-4895-95E9-82514CAF9A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{178F703F-5395-4895-95E9-82514CAF9A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{178F703F-5395-4895-95E9-82514CAF9A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{178F703F-5395-4895-95E9-82514CAF9A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4EC659A-1E12-4D1B-8B42-7319A8A23D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4EC659A-1E12-4D1B-8B42-7319A8A23D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4EC659A-1E12-4D1B-8B42-7319A8A23D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4EC659A-1E12-4D1B-8B42-7319A8A23D33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2F63E1-CEB6-447A-8924-1F70B7FF9A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2F63E1-CEB6-447A-8924-1F70B7FF9A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2F63E1-CEB6-447A-8924-1F70B7FF9A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6801741-85B5-4BD2-9CDC-D7FEE062CB79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

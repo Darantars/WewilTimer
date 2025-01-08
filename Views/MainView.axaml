@@ -1,0 +1,58 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:WewilTimer.ViewModels"
+             mc:Ignorable="d"
+             x:Class="WewilTimer.Views.MainView"
+             x:DataType="vm:MainViewModel"
+             x:Name="MainViewControl">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+  <Grid x:Name="Root">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"></RowDefinition>
+      <RowDefinition Height="*"></RowDefinition>
+      <RowDefinition Height="Auto"></RowDefinition>
+    </Grid.RowDefinitions>
+
+    <TextBlock Text="WewilTimer Proto" />
+
+    <ScrollViewer Grid.Row="1">
+      <ItemsControl ItemsSource="{Binding ToDoItems}">
+        <ItemsControl.ItemTemplate>
+          <DataTemplate DataType="vm:ToDoItemViewModel">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="80*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+              </Grid.ColumnDefinitions>
+              <CheckBox Grid.Column="0" Content="{Binding Content}"
+                                        IsChecked="{Binding IsChecked}" />
+              <Button Grid.Column="1"
+                      Content="Delete"
+                      Command="{Binding #Root.((vm:MainViewModel)DataContext).DeleteItemCommand}"
+                      CommandParameter="{Binding .}"/>
+            </Grid>
+          </DataTemplate>
+        </ItemsControl.ItemTemplate>
+      </ItemsControl>
+    </ScrollViewer>
+
+    <TextBox
+      Name="NewToDoItemTextBox"
+      Grid.Row="2"
+      Watermark="Add a new Item">
+      <TextBox.InnerRightContent>
+        <Button
+          Command="{Binding AddItemCommand}"
+          CommandParameter="{Binding ElementName=NewToDoItemTextBox, Path=Text}">
+          Add
+        </Button>
+      </TextBox.InnerRightContent>
+    </TextBox>
+  </Grid>
+</UserControl>
