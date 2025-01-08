@@ -10,6 +10,5 @@
         x:Class="WewilTimer.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
         Title="WewilTimer">
-        <views:MainView 
-                Margin="5"/>
+
 </Window>

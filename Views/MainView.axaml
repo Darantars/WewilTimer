@@ -6,7 +6,9 @@
              mc:Ignorable="d"
              x:Class="WewilTimer.Views.MainView"
              x:DataType="vm:MainViewModel"
-             x:Name="MainViewControl">
+             x:Name="MainViewControl" 
+             Padding="5"
+             >
   <Design.DataContext>
     <!-- This only sets the DataContext for the previewer in an IDE,
          to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
@@ -18,8 +20,21 @@
       <RowDefinition Height="*"></RowDefinition>
       <RowDefinition Height="Auto"></RowDefinition>
     </Grid.RowDefinitions>
-
-    <TextBlock Text="WewilTimer Proto" />
+    <StackPanel
+        Orientation="Horizontal">
+      <TextBlock Grid.Row="0"   
+                 Text="Wewil"
+                 Foreground="#3500D4"
+      />
+      <TextBlock Grid.Row="0"   
+                 Text="Timer"
+                 Foreground="White"
+      />
+      <TextBlock Grid.Row="0"   
+                 Text=" Proto 0.1"
+                 Foreground="DimGray"
+      />
+    </StackPanel>
 
     <ScrollViewer Grid.Row="1">
       <ItemsControl ItemsSource="{Binding ToDoItems}">
