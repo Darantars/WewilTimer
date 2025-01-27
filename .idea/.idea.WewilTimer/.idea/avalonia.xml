@@ -6,6 +6,8 @@
         <entry key="App.axaml" value="../WewilTimer.Desktop/WewilTimer.Desktop.csproj" />
         <entry key="Views/MainView.axaml" value="../WewilTimer.Desktop/WewilTimer.Desktop.csproj" />
         <entry key="Views/MainWindow.axaml" value="../WewilTimer.Desktop/WewilTimer.Desktop.csproj" />
+        <entry key="Views/NewTaskAddingView.axaml" value="../WewilTimer.Desktop/WewilTimer.Desktop.csproj" />
+        <entry key="Views/TaskAddingWindow.axaml" value="../WewilTimer.Desktop/WewilTimer.Desktop.csproj" />
       </map>
     </option>
   </component>

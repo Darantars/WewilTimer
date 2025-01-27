@@ -24,12 +24,12 @@ namespace WewilTimer.ViewModels
             DeleteItemCommand = ReactiveCommand.Create<ToDoItemViewModel>(DeleteToDoItem);
         }
 
-        public void AddToDoItem(string _content)
+        public void AddToDoItem(string _mainText)
         {
             ToDoItems.Add(new ToDoItemViewModel(new ToDoItem()
             {
                 IsChecked = false,
-                Content = _content
+                MainText = _mainText
             }));
             ClearNewTaskTextBox();
         }

@@ -17,7 +17,7 @@ namespace WewilTimer.ViewModels
         public ToDoItemViewModel(ToDoItem item) 
         {
             IsChecked = item.IsChecked;
-            Content = item.Content;
+            MainText = item.MainText;
         }
 
         public bool IsChecked 
@@ -25,10 +25,10 @@ namespace WewilTimer.ViewModels
             get { return _isChecked; }
             set { _isChecked = value; }
         }
-        public string Content
+        public string MainText
         {
-            get { return _content; }
-            set { _content = value; }
+            get { return _mainText; }
+            set { _mainText = value; }
         }
 
         //[ObservableProperty]
@@ -36,14 +36,14 @@ namespace WewilTimer.ViewModels
         { get; set; }
 
         //[ObservableProperty]
-        private string _content { get; set; }
+        private string _mainText { get; set; }
 
         public ToDoItem GetToDoItem()
         {
             return new ToDoItem
             {
                 IsChecked = this.IsChecked,
-                Content = this.Content
+                MainText = this.MainText
             };
         }
 

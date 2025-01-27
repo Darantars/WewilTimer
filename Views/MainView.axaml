@@ -25,14 +25,17 @@
       <TextBlock Grid.Row="0"   
                  Text="Wewil"
                  Foreground="#3500D4"
+                 FontSize="18"
       />
       <TextBlock Grid.Row="0"   
                  Text="Timer"
                  Foreground="White"
+                 FontSize="18"
       />
       <TextBlock Grid.Row="0"   
                  Text=" Proto 0.1"
                  Foreground="DimGray"
+                 FontSize="18"
       />
     </StackPanel>
 
@@ -45,7 +48,7 @@
                 <ColumnDefinition Width="80*"></ColumnDefinition>
                 <ColumnDefinition Width="Auto"></ColumnDefinition>
               </Grid.ColumnDefinitions>
-              <CheckBox Grid.Column="0" Content="{Binding Content}"
+              <CheckBox Grid.Column="0" Content="{Binding MainText}"
                                         IsChecked="{Binding IsChecked}" />
               <Button Grid.Column="1"
                       Content="Delete"
@@ -60,12 +63,12 @@
     <TextBox
       Name="NewToDoItemTextBox"
       Grid.Row="2"
-      Watermark="Add a new Item">
+      Watermark="Что нужно свершить?">
       <TextBox.InnerRightContent>
         <Button
           Command="{Binding AddItemCommand}"
           CommandParameter="{Binding ElementName=NewToDoItemTextBox, Path=Text}">
-          Add
+          В план!
         </Button>
       </TextBox.InnerRightContent>
     </TextBox>
