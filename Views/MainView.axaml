@@ -51,9 +51,15 @@
               <CheckBox Grid.Column="0" Content="{Binding MainText}"
                                         IsChecked="{Binding IsChecked}" />
               <Button Grid.Column="1"
-                      Content="Delete"
+                      Opacity="0.75"
                       Command="{Binding #Root.((vm:MainViewModel)DataContext).DeleteItemCommand}"
-                      CommandParameter="{Binding .}"/>
+                      CommandParameter="{Binding .}"
+                      Padding="5"
+                      Background="Transparent">
+                  <Image Source="/Assets/InListToDoDeleteBlue.png" Width="15" Height="15">
+                    
+                  </Image>  
+              </Button>
             </Grid>
           </DataTemplate>
         </ItemsControl.ItemTemplate>
@@ -63,12 +69,14 @@
     <TextBox
       Name="NewToDoItemTextBox"
       Grid.Row="2"
-      Watermark="Что нужно свершить?">
+      Watermark="Новый план?">
       <TextBox.InnerRightContent>
         <Button
           Command="{Binding AddItemCommand}"
-          CommandParameter="{Binding ElementName=NewToDoItemTextBox, Path=Text}">
-          В план!
+          CommandParameter="{Binding ElementName=NewToDoItemTextBox, Path=Text}"
+          Background="#3500D4"
+          Margin="2">
+          Делаем!
         </Button>
       </TextBox.InnerRightContent>
     </TextBox>

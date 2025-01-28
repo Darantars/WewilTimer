@@ -29,7 +29,10 @@ namespace WewilTimer.ViewModels
             ToDoItems.Add(new ToDoItemViewModel(new ToDoItem()
             {
                 IsChecked = false,
-                MainText = _mainText
+                MainText = _mainText,
+                Date = DateTime.Now,
+                Description = "",
+                Project = ""
             }));
             ClearNewTaskTextBox();
         }
