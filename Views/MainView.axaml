@@ -24,7 +24,7 @@
         Orientation="Horizontal">
       <TextBlock Grid.Row="0"   
                  Text="Wewil"
-                 Foreground="#3500D4"
+                 Foreground="#364BE0"
                  FontSize="18"
       />
       <TextBlock Grid.Row="0"   
@@ -74,7 +74,7 @@
         <Button
           Command="{Binding AddItemCommand}"
           CommandParameter="{Binding ElementName=NewToDoItemTextBox, Path=Text}"
-          Background="#3500D4"
+          Background="#364BE0"
           Margin="2">
           Делаем!
         </Button>

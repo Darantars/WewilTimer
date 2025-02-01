@@ -1,9 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 using System.Reactive;
 using System.Windows.Input;
 using Avalonia.Controls;
 using ReactiveUI;
+using Newtonsoft.Json;
 using WewilTimer.Core.Models;
 using WewilTimer.ViewModels;
 using WewilTimer.Views;
@@ -12,6 +16,9 @@ namespace WewilTimer.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        
+        private const string FilePath = "usersLocalToDoItemSaveFile.json"; //TODO: перенести путь в конфиг-файл
+        
         public MainView view;
         public ReactiveCommand<string, Unit> AddItemCommand { get; }
         public ReactiveCommand<ToDoItemViewModel, Unit> DeleteItemCommand { get; }
@@ -22,6 +29,8 @@ namespace WewilTimer.ViewModels
             this.view = mainView;
             AddItemCommand = ReactiveCommand.Create<string>(AddToDoItem);
             DeleteItemCommand = ReactiveCommand.Create<ToDoItemViewModel>(DeleteToDoItem);
+            
+            LoadToDoItemsFromUserSaveFile();
         }
 
         public void AddToDoItem(string _mainText)
@@ -35,12 +44,54 @@ namespace WewilTimer.ViewModels
                 Project = ""
             }));
             ClearNewTaskTextBox();
+            UpdateToDoItemsInUserSaveFile();
         }
 
         public void DeleteToDoItem(ToDoItemViewModel item)
         {
             ToDoItems.Remove(item);
+            UpdateToDoItemsInUserSaveFile();
         }
+        
+        private void UpdateToDoItemsInUserSaveFile()
+        {
+            var items = ToDoItems.Select(item => new
+            {
+                item.IsChecked,
+                item.MainText,
+                item.Date,
+                item.Description,
+                item.Project
+            }).ToList();
+
+            var json = JsonConvert.SerializeObject(items, Formatting.Indented);
+            File.WriteAllText(FilePath, json);
+        }
+        
+        private void LoadToDoItemsFromUserSaveFile()
+        {
+            if (File.Exists(FilePath))
+            {
+                var json = File.ReadAllText(FilePath);
+                var items = JsonConvert.DeserializeObject<List<dynamic>>(json);
+                if (items != null)
+                {
+                    ToDoItems.Clear();
+                    foreach (var item in items)
+                    {
+                        ToDoItems.Add(new ToDoItemViewModel(new ToDoItem
+                        {
+                            IsChecked = item.IsChecked,
+                            MainText = item.MainText,
+                            Date = item.Date,
+                            Description = item.Description,
+                            Project = item.Project
+                        }));
+                    }
+                }
+            }
+        }
+        
 
         public void ClearNewTaskTextBox()
         {
