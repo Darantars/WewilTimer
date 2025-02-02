@@ -11,13 +11,16 @@ using Newtonsoft.Json;
 using WewilTimer.Core.Models;
 using WewilTimer.ViewModels;
 using WewilTimer.Views;
+using Xamarin.Essentials;
 
 namespace WewilTimer.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
         
-        private const string FilePath = "usersLocalToDoItemSaveFile.json"; //TODO: перенести путь в конфиг-файл
+        private const string FileName = "usersLocalToDoItemSaveFile.json"; //TODO: перенести путь в конфиг-файл;
+        
+        string FilePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
         
         public MainView view;
         public ReactiveCommand<string, Unit> AddItemCommand { get; }
