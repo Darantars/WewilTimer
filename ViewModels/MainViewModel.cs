@@ -20,8 +20,8 @@ namespace WewilTimer.ViewModels
         
         private const string FileName = "usersLocalToDoItemSaveFile.json"; //TODO: перенести путь в конфиг-файл;
         
-        string FilePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
-        
+        private string FilePath;
+
         public MainView view;
         public ReactiveCommand<string, Unit> AddItemCommand { get; }
         public ReactiveCommand<ToDoItemViewModel, Unit> DeleteItemCommand { get; }
@@ -32,6 +32,16 @@ namespace WewilTimer.ViewModels
             this.view = mainView;
             AddItemCommand = ReactiveCommand.Create<string>(AddToDoItem);
             DeleteItemCommand = ReactiveCommand.Create<ToDoItemViewModel>(DeleteToDoItem);
+            
+            if (DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                FilePath = Path.Combine(FileSystem.AppDataDirectory, FileName);
+            }
+            else
+            {
+                FilePath = "usersLocalToDoItemSaveFile.json";
+            }
+            
             
             LoadToDoItemsFromUserSaveFile();
         }
